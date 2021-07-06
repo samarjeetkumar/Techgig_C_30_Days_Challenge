@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+	int principal, interest, year, sample_interest;
+	scanf("%d", &principal);
+	scanf("%d",&interest);
+	scanf("%d", &year);
+
+    sample_interest = (principal * interest * year)/100;
+
+	printf("%d", sample_interest);
+}
