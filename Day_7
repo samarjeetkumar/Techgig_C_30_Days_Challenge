@@ -1,11 +1,12 @@
 #include<stdio.h>
 int main()
 {
-	 int maximum, flag, count=0, i, j;
+	 int min, maximum, flag, count=0, i, j;
 	 
+	 scanf("%d", &min);
 	 scanf("%d", &maximum);
 	 
-	 for(i=0; i<=maximum; i++)
+	 for(i=min; i<=maximum; i++)
 	 {
 		  flag = 0;
 		  for(j=2; j <= i/2; j++)
