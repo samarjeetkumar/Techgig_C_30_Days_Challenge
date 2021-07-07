@@ -1,0 +1,19 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+#include<stdio.h>
+int main()
+{
+  int num1, num2, GCD=0;
+
+  scanf("%d", &num1);
+  scanf("%d", &num2);
+
+  for(int i=1;i<=num1 && i<=num2; i++)
+  {
+	  if(num1%i==0 && num2%i==0)
+	  {
+		  GCD = i;
+	  }
+  }
+  printf("%d", GCD);
+
+}
