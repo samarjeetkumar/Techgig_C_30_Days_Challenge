@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int num, power;
+	scanf("%d", &num);
+	scanf("%d", &power);
+	int total = pow(num,power);
+	printf("%d", total);
+
+}
