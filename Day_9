@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int num, temp, temp1, r, Narcissistic=0, len=0;
+    
+	scanf("%d", &num);
+	temp = num;
+	temp1 = temp;
+    while(temp1>0)
+	 {
+		    len++;
+        temp1 = temp1/10;
+	 }
+
+	while(num>0)
+	{
+		    r = num % 10;
+		    Narcissistic = Narcissistic + pow(r,len);
+        num = num/10;
+	}
+
+	if(temp == Narcissistic)
+	printf("True");
+	else
+	printf("False");
+}
