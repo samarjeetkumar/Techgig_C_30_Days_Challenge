@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+	char str[20] = "Hello Techgig";
+	char name[100];
+	gets(name);
+	puts(str);
+	puts(name);
+}
