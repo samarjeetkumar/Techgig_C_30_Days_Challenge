@@ -1,0 +1,21 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+#include<stdio.h>
+int main()
+{
+	int num, temp, r, armstrong=0;
+    
+	scanf("%d", &num);
+	temp = num;
+
+	while(num>0)
+	{
+		r = num % 10;
+		armstrong = armstrong + (r*r*r);
+        num = num/10;
+	}
+
+	if(temp == armstrong)
+	printf("True");
+	else
+	printf("False");
+}
