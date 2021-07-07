@@ -1,0 +1,37 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+#include<stdio.h>
+int main()
+{
+	int r, c, mat[10][10], tran[10][10];
+
+	scanf("%d", &r);
+	scanf("%d", &c);
+
+	for(int i=0; i<r; i++)
+	{
+		for(int j=0; j<c; j++)
+		{
+			scanf("%d", &mat[i][j]);
+		}
+	}
+
+	for(int i=0; i<r; i++)
+	{
+		for(int j=0; j<c; j++)
+		{
+			tran[j][i] = mat[i][j];
+		}
+	}
+
+for (int i = 0; i<r; ++i)
+{ 
+  for (int j = 0; j<c; ++j)
+   {
+        if (j == c - 1)
+        printf("%d",tran[i][j]);        
+        else           
+        printf("%d ",tran[i][j]);  
+    }          
+       printf("\n"); 
+    } return 0;
+}
