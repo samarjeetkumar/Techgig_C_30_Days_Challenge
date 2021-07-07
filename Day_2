@@ -1,0 +1,28 @@
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+# define MAX_INPUT 100
+int main()
+{
+	char value[MAX_INPUT] = "";
+	double temp;
+	int n;
+	char str[MAX_INPUT] = "";
+	double val = 1e-12;
+
+	fgets(value, 100, stdin);
+	if (sscanf(value, "%lf", &temp) == 1)
+	{
+		n = (int)temp; // typecast to int.
+		if (fabs(temp - n) / temp > val)
+			printf("This input is of type Float.\n");		
+		else
+			printf("This input is of type Integer.\n");		
+	}
+	else if (sscanf(value, "%s", str) == 1)	
+		printf("This input is of type string.\n");
+	
+	else	
+		printf("input not recognized\n");	
+}
