@@ -1,0 +1,33 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+#include<stdio.h>
+int main()
+{
+	int n, arr[10], num, sum=0, flag=0;
+
+	scanf("%d", &n);
+	for(int i=0; i<n; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+    scanf("%d", &num);
+	//////////////////////////////////////////////////////////
+	for(int i=0; i<n; i++)
+	{
+		for(int j=i+1; j<=n; j++)
+		{
+			sum = arr[i] + arr[j];
+			
+			if(num == sum)
+			{
+				flag =1;
+				break;
+			}
+			
+		}
+	}
+	///////////////////////////////////////////////////////////////
+	if(flag == 1)
+	printf("True");
+	else
+	printf("False");
+}
