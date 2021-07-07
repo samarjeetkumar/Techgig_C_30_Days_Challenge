@@ -1,34 +1,33 @@
-#include <stdio.h>
+#include<stdio.h>
 #include <string.h>
 
-int main() {
-   char str[50][50], temp[50];
-   int n;
-    scanf("%d", &n);
-   // Getting strings input
-   for (int i = 0; i <=n; ++i) {
-      //fgets(str[i], sizeof(str[i]), stdin);
-	  gets(str[i]);
-   }
+int main()
+{
+    int i, j,n;
+scanf("%d",&n);
 
-   // storing strings in the lexicographical order
-   for (int i = 0; i <= n; ++i) {
-      for (int j = i + 1; j <= n; ++j) {
+    char str[n][50], temp[50];
 
-         // swapping strings if they are not in the lexicographical order
-         if (strcmp(str[i], str[j]) > 0) {
-            strcpy(temp, str[i]);
-            strcpy(str[i], str[j]);
-            strcpy(str[j], temp);
-         }
-      }
-   }
+    for(i=0; i<n; ++i)
+        scanf("%s[^\n]",str[i]);
 
-   for (int i = 0; i <= n; ++i)
+
+    for(i=0; i<n-1; ++i)
+        for(j=i+1; j<n ; ++j)
+        {
+            if(strcmp(str[i], str[j])>0)
+            {
+                strcpy(temp, str[i]);
+                strcpy(str[i], str[j]);
+                strcpy(str[j], temp);
+            }
+        }
+
+
+    for(i=0; i<n; ++i)
     {
-      //fputs(str[i], stdout);
-	  puts(str[i]);
-   }
+        puts(str[i]);
+    }
 
-   return 0;
+    return 0;
 }
