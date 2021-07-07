@@ -1,0 +1,26 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+#include<stdio.h>
+int main()
+{
+	int num[20], n;
+	int  max = 0, secMax = 0;
+
+	scanf("%d", &n);
+	for(int i=0 ; i<=n ; i++)
+	{
+		scanf("%d", &num[i]);
+	}
+	for(int i=0 ; i<=n ; i++)
+	{
+		if(max < num[i])
+		{
+			secMax = max;
+			max = num[i];
+		}
+		else if(num[i] > secMax && num[i] < max)
+		{
+			secMax = num[i];
+		}
+	}
+	printf("%d", secMax);
+}
